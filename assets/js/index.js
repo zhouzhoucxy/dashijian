@@ -1,7 +1,7 @@
 $(function () {
 
     var layer = layui.layer;
-
+    
     $("#remove").on("click", function () {
        layer.confirm('确定要退出?', {
            icon: 3,
@@ -13,9 +13,9 @@ $(function () {
            layer.close(index);
        });
       })
-
-
-
+     
+    
+    arr = function get() { 
 
     $.ajax({
         type: "get",
@@ -37,8 +37,9 @@ $(function () {
             }
         }
     });
+        
 
-
-
+ }
+arr();
 
 })

@@ -12,7 +12,9 @@
     <div class="layui-card">
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
-           <form class="layui-form" action="" lay-filter="userinfo">
+
+
+           <form class="layui-form" action="" lay-filter="userinfo" id="formuser" >
                <input type="hidden" name="id">
                <div class="layui-form-item">
                    <label class="layui-form-label">登录名称</label>
@@ -38,10 +40,13 @@
                <div class="layui-form-item">
                    <div class="layui-input-block">
                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-                       <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                       <button type="reset" class="layui-btn layui-btn-primary" id="reset" >重置</button>
                    </div>
                </div>
                 </form>
+
+
+                
         </div>
     </div>
 </body>
