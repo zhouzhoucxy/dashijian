@@ -33,7 +33,7 @@ $(function () {
                 $(".layui-nav-img").hide()
             } else {
                 $(".use").hide()
-                $(".layui-nav-img").show()
+                $(".layui-nav-img").prop("src", res.data.user_pic).show()
             }
         }
     });
