@@ -72,6 +72,7 @@ $(function () {
     $("body").on("submit", "#editform", function (e) {
         e.preventDefault();
         var data = $(this).serialize();
+        
         console.log(data);
         $.ajax({
             type: "POST",
@@ -90,13 +91,17 @@ $(function () {
 
     //删除按钮模板
     var removes;
-    $("body").on("click", "#remove", function () {
-        var id = $(this).siblings().data("id")
+    $("body").on("click", "#remove", function (e) {
+        e.stopPropagation();
+        
+        console.log(1);
+        var id = $(this).siblings().data("id");
       removes =  layer.confirm('确认删除?', {
             icon: 3,
             title: '提示'
         }, function (index) {
             //do something
+             
             $.ajax({
                 type: "get",
                 url: "/my/article/deletecate/" + id,
@@ -108,8 +113,9 @@ $(function () {
                 }
             });
             
+            
+              
         });
-        
-
+       
       })
 })
